@@ -1,1 +1,41 @@
-<p>header works!</p>
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-weight-semibold" href="#">
+      Recipe App
+    </a>
+    <button
+      class="navbar-burger"
+      [ngClass]="{ 'is-active': isShownMenu }"
+      (click)="toggleMenu()"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </div>
+  <div class="navbar-menu" [ngClass]="{ 'is-active': isShownMenu }">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Recipes
+      </a>
+      <a class="navbar-item">
+        Shopping List
+      </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Manage
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            Save Data
+          </a>
+          <a class="navbar-item">
+            Fetch Data
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
